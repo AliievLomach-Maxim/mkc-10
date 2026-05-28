@@ -1,6 +1,7 @@
 # Module-01
 
-## Less-01
+<details>
+<summary>Less-01</summary>
 
 - Знайомство
   - Бібліотека React
@@ -27,3 +28,24 @@
 - Значення, що не відображаются
 - Колекції
 - Children (optional)
+
+</details>
+
+<details>
+<summary>Less-02</summary>
+
+- Вбудовані стилі
+- Ванльний CSS
+- CSS-модулі
+  - Використання
+  - Композиція класів
+  - Бібліотека clsx
+  - Властивість composes
+- Повторне використання стилів
+- Component Wrapper
+- Нормалізація стилів `modern-normalize`
+- Білбліотека React Icons
+
+</details>
+<br/>
+<br/>

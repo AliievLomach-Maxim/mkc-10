@@ -1,0 +1,19 @@
+.title {
+  color: green;
+  align-items: center;
+}
+
+.base {
+  font-size: 24px;
+  padding: 12px;
+}
+
+.online {
+  background-color: greenyellow;
+  /* composes: base; */
+}
+
+.offline {
+  background-color: orangered;
+  /* composes: base; */
+}
