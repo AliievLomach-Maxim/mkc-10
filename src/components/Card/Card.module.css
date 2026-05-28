@@ -1,0 +1,16 @@
+.card {
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 200px;
+  width: 100%;
+  background-color: grey;
+}
+
+.icon {
+  font-size: 48px;
+  color: red;
+}

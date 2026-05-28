@@ -1,0 +1,24 @@
+.base {
+  padding: 12px;
+  border-radius: 12px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+.warning {
+  background-color: orange;
+  color: white;
+}
+
+.error {
+  background-color: red;
+  color: black;
+}
+
+.sm {
+  width: 100px;
+}
