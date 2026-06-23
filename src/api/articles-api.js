@@ -12,3 +12,8 @@ export const getArticles = async (searchQuery, page) => {
   })
   return data
 }
+
+export const getSingleArticle = async (id) => {
+  const { data } = await axios.get(`/items/${id}`)
+  return data
+}
