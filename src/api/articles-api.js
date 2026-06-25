@@ -6,7 +6,7 @@ export const getArticles = async (searchQuery, page) => {
   const { data } = await axios.get(`/search`, {
     params: {
       query: searchQuery,
-      hitsPerPage: 5,
+      hitsPerPage: 20,
       page,
     },
   })

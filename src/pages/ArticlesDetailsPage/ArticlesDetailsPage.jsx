@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { getSingleArticle } from '../../api/articles-api'
-import { NavLink, Outlet, useParams } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom'
 
 const ArticlesDetailsPage = () => {
   const [article, setArticle] = useState(null)
@@ -24,10 +24,16 @@ const ArticlesDetailsPage = () => {
     }
     fetchArticles()
   }, [articleId])
+  //
+  const articlesDetailsPageLocation = useLocation()
+  const prevLocationState = articlesDetailsPageLocation.state
 
   return (
     <div>
       ArticlesDetailsPage
+      <br />
+      {/* <Link to={'/articles'}>Go Back</Link> */}
+      <Link to={prevLocationState ?? '/articles'}>Go Back</Link>
       {isLoading && <h1>Loading..</h1>}
       {error && <h1>Oops..Article not found</h1>}
       {article && (
@@ -44,7 +50,9 @@ const ArticlesDetailsPage = () => {
       <br />
       <NavLink to='children-1'>Children-1</NavLink>
       <hr />
-      <Outlet />
+      <Suspense fallback={<h1>.......Loading.......</h1>}>
+        <Outlet />
+      </Suspense>
     </div>
   )
 }
