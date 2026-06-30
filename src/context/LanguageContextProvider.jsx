@@ -9,16 +9,11 @@ const LanguageContextProvider = ({ children }) => {
   const handleLang = (newLang) => {
     setLanguage(newLang)
   }
-  return (
-    <LanguageContext.Provider
-      value={{
-        language,
-        handleLang,
-      }}
-    >
-      {children}
-    </LanguageContext.Provider>
-  )
+  const store = {
+    language,
+    handleLang,
+  }
+  return <LanguageContext.Provider value={store}>{children}</LanguageContext.Provider>
 }
 
 export default LanguageContextProvider
