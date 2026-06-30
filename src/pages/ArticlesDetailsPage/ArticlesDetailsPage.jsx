@@ -1,8 +1,11 @@
 import { Suspense, useEffect, useState } from 'react'
 import { getSingleArticle } from '../../api/articles-api'
 import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const ArticlesDetailsPage = () => {
+  const lngValue = useSelector((state) => state.lng.value)
+  //
   const [article, setArticle] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -31,6 +34,7 @@ const ArticlesDetailsPage = () => {
   return (
     <div>
       ArticlesDetailsPage
+      <h1>Current lng: {lngValue}</h1>
       <br />
       {/* <Link to={'/articles'}>Go Back</Link> */}
       <Link to={prevLocationState ?? '/articles'}>Go Back</Link>
